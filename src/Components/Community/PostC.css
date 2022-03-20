@@ -1,0 +1,49 @@
+.postC {
+  padding: 20px 40px;
+}
+.postC > header {
+  font-size: 35px;
+  font-weight: 200;
+  color: black;
+  margin-bottom: 10px;
+}
+.postC-Block {
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+  border-radius: 15px;
+  /* align-items: center; */
+  box-shadow: rgb(0 0 0 / 13%) 0px 0px 4px;
+}
+.postC-Block-head {
+  color: black;
+  font-size: 18px;
+}
+.postC-Block-Subhead {
+  color: rgb(94, 94, 94);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.postC-Block-input {
+  margin-bottom: 30px;
+  width: 80%;
+  padding: 10px 20px;
+  color: black;
+}
+.postC-Block-textArea {
+  margin-bottom: 30px;
+  max-width: 80%;
+  min-width: 80%;
+  padding: 10px 20px;
+  color: black;
+  min-height: 30vh;
+}
+.post-Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  width: max-content;
+  cursor: pointer;
+  background-color: var(--protfolioMainColor--);
+}

@@ -1,0 +1,43 @@
+import React from "react";
+import "./ThirdPageItem.css";
+import DevImage from "../../Images/DevImage";
+const ThirdPageItem = () => {
+  return (
+    <div className="thirdImageItem">
+      <DevImage />
+      <div>
+        <header>CERTIFIED PROGRAMS</header>
+        <p>
+          Get upskilled with the in-demand courses of the era through our
+          comprehensive certified programs.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default ThirdPageItem;
+
+
+.thirdImageItem {
+  display: flex;
+  border-radius: 15px;
+  background-color: var(--maincolor--);
+  padding: 20px;
+  width: 45%;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.thirdImageItem > div {
+  margin-left: 20px;
+}
+.thirdImageItem > div > header {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+.thirdImageItem > div > p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondaryColor--);
+}

@@ -1,0 +1,22 @@
+.staticOneItem {
+  display: flex;
+  border-radius: 15px;
+  background-color: var(--maincolor--);
+  padding: 20px;
+  width: 45%;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.staticOneItem > div {
+  margin-left: 20px;
+}
+.staticOneItem > div > header {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+.staticOneItem > div > p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--secondaryColor--);
+}

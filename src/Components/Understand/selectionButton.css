@@ -1,0 +1,16 @@
+.selectionButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(226, 240, 253);
+  height: 35px;
+  border-radius: 20px;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+.selectionButton > p {
+  color: blue;
+  font-weight: 400;
+  font-weight: 16px;
+  /* letter-spacing: 1.3px; */
+}

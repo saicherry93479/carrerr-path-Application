@@ -1,0 +1,19 @@
+.community-Sec {
+  display: flex;
+  background-color: var(--protfolioBackgroundColor--);
+  padding: 20px 40px;
+  height: 90vh;
+  margin-bottom: 50px;
+}
+.community-Sec-left {
+  flex-basis: 20%;
+}
+.community-Sec-right {
+  flex-basis: 80%;
+  /* background-color: red; */
+  overflow-y: auto;
+  padding: 0px 20px;
+}
+.community-Sec-right::-webkit-scrollbar {
+  display: none;
+}

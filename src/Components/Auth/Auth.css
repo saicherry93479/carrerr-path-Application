@@ -1,0 +1,84 @@
+.auth-Sec {
+  position: absolute;
+  height: 100vh;
+  z-index: 200;
+  width: 100vw;
+
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 1.2s ease;
+}
+.loginPage {
+  height: 100vh;
+  margin: auto;
+  width: 500px;
+  background-color: white;
+
+  /* background-color: red; */
+}
+
+/* starts  */
+
+.auth-HeaderOne {
+  width: 100%;
+
+  position: relative;
+  /* background-color: red; */
+  padding: 10px 0px;
+}
+
+.auth-HeaderOne > header {
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  font-weight: 500;
+  font-family: "Comfortaa", cursive;
+}
+.auth-HeaderOne > p {
+  text-decoration: underline;
+  color: #3661cf;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  top: 20px;
+  color: black;
+}
+.auth-HeaderTwo {
+  padding-left: 40px;
+  display: flex;
+  margin-top: 30px;
+}
+.auth-HeaderTwo > div {
+  transition: all 1s ease;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+.auth-HeaderTwo > div > p {
+  color: black;
+  transition: all 1s ease;
+}
+.auth-LoginForm {
+  padding-left: 40px;
+  margin-top: 50px;
+  transition: all 1s ease;
+}
+.login-End {
+  color: rgb(114, 111, 111);
+  padding-left: 40px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+.blue {
+  color: blue;
+}
+.errorSignup {
+  display: flex;
+  align-items: center;
+}
+.errorSignup * {
+  color: black;
+}

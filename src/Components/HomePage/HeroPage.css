@@ -1,0 +1,33 @@
+.hero-Sec {
+  background-image: url("../../Images/backgroudImageThree.jpg");
+  height: 490px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* background-color: red; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-Sec::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* z-index: 2;4'pfkw;/jfiMṢṆṣZ<Xufr7S6RUF 2E 1,E1M20J-    98WU    */
+  top: 0;
+  left: 0;
+  background-color: var(--backgroundColor--);
+}
+
+.hero-Sec > h1 {
+  font-size: var(--headingSize--);
+  z-index: 10;
+  position: relative;
+  width: 69%;
+  font-weight: 600;
+  text-align: center;
+  color: var(--secondaryColor--);
+}

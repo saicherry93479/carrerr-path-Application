@@ -1,0 +1,19 @@
+.thirdPage {
+  background-color: var(--maincolor--);
+  padding-top: 30px;
+}
+.thirdPage-Flex {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 60px;
+
+  justify-content: center;
+  /* background-color: red; */
+}
+.thirdPage > header {
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+
+  color: var(--secondaryColor--);
+}

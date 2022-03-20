@@ -1,0 +1,24 @@
+.custom-TextField > i {
+  color: rgb(129, 129, 129);
+  margin: 0 10px;
+  font-size: 14px;
+}
+.custom-TextField {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 15px;
+  /* background-color: red; */
+  height: 35px;
+  align-items: center;
+  margin: 30px 0px;
+}
+.custom-TextField > input {
+  height: 98%;
+  color: black;
+  width: 80%;
+  border: none;
+  outline: none;
+}
+.password {
+  cursor: pointer;
+}

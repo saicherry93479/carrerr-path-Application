@@ -1,0 +1,27 @@
+.myProtfolio-Sec {
+  padding: 0px 20px;
+}
+.myProtfolio-Sec-Header {
+  padding: 10px 0px;
+  border-bottom: 1.5px solid rgb(78, 78, 78);
+}
+.myProtfolio-Sec-Header > P {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  color: black;
+}
+.myProtfolio-Sec > p:nth-child(2) {
+  margin: 10px 0px;
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 18px;
+  color: black;
+  letter-spacing: 1.1px;
+  word-spacing: 2px;
+}
+.myProtfolio-Sec >header{
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(145, 145, 145);
+}

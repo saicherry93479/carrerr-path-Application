@@ -1,0 +1,43 @@
+.understand-Sec {
+  position: absolute;
+  height: 100vh;
+  z-index: 200;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 1.2s ease;
+}
+.understand-Sec > .underStandPage {
+  height: 100vh;
+  margin: auto;
+  width: 500px;
+  background-color: white;
+  padding: 0px 20px;
+}
+.underStand-Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
+}
+.underStand-Header > p {
+  color: blue;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500px;
+}
+.underStand-Header > header {
+  /* font-family: "Comfortaa", cursive; */
+  font-family: "EB Garamond", serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--maincolor--);
+}
+.underStandPage * {
+  color: black;
+}
+
+.understand-back {
+  cursor: pointer;
+}

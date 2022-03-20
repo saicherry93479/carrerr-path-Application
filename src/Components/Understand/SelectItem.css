@@ -1,0 +1,15 @@
+/* select button */
+
+.selectButton {
+  background-color: #ecf7f3;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.selectButton > p {
+  font-size: 12px;
+}
+

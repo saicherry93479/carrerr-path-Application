@@ -1,0 +1,16 @@
+.report-Sec {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(206, 229, 250);
+}
+.report-Info {
+  height: 90vh;
+  padding: 10px 30px;
+  width: 80vw;
+  border-radius: 40px;
+  background-color: white;
+}

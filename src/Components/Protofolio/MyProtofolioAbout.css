@@ -1,0 +1,23 @@
+.myProtofolio-About {
+  padding: 30px;
+  background-color: white;
+  margin: 20px 0px;
+  border-radius: 15px;
+  /* align-items: center; */
+  box-shadow: rgb(0 0 0 / 13%) 0px 0px 4px;
+}
+.myProtofolioAboutItem * {
+  color: black;
+}
+.myProtofolioAboutItem {
+  margin: 20px 0px;
+}
+.myProtofolioAboutItem > header {
+  font-size: 18px;
+  color: black;
+  letter-spacing: 1.2px;
+}
+.myProtofolioAboutItem > p {
+  color: rgb(100, 100, 100);
+  letter-spacing: 1.1px;
+}

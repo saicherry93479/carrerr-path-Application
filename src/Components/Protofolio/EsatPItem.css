@@ -1,0 +1,38 @@
+.EsatP-Item {
+  display: flex;
+
+  padding: 30px 20px;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  margin: 20px;
+  /* align-items: center; */
+  box-shadow: rgb(0 0 0 / 13%) 0px 0px 4px;
+}
+.EsatP-Item-Info {
+  margin-left: 20px;
+  margin-right: auto;
+}
+.EsatP-Item-Info > p:nth-child(1) {
+  color: black;
+  font-weight: 500;
+}
+.EsatP-Item-Info > p:nth-child(2) {
+  color: rgb(82, 82, 82);
+  font-weight: 300;
+  font-size: 13px;
+}
+.EsatP-not {
+  color: rgb(105, 105, 105);
+  font-size: 12px;
+  letter-spacing: 1.1px;
+}
+.EsatP-Button {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--protfolioMainColor--);
+  padding: 8px 16px;
+  border-radius: 20px;
+}

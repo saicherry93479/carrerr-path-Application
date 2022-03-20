@@ -1,0 +1,23 @@
+.continueButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+    to right,
+    #f6bc00,
+    #f7a200,
+    #f58800,
+    #f16c00,
+    #eb4d12
+  );
+  margin-top: 60px;
+  cursor: pointer;
+}
+.continueButton > p {
+  /* color: wh; */
+  color: white;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+}

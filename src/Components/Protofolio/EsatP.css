@@ -1,0 +1,14 @@
+.Estp-Sec > .header {
+  margin-left: 30px;
+  padding: 10px 0px;
+  border-bottom: 2px solid rgb(182, 182, 182);
+}
+.Estp-Sec > .header > p {
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+.protofolio-Sec-Right::-webkit-scrollbar {
+  display: none;
+}

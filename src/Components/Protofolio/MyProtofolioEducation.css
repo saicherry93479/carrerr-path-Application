@@ -1,0 +1,22 @@
+.myProtofolioEducationItem {
+  background-color: white;
+  border-radius: 15px;
+  /* align-items: center; */
+  padding: 20px;
+  flex-basis: 32%;
+  box-shadow: rgb(0 0 0 / 13%) 0px 0px 4px;
+}
+.myProtofolioEducation {
+  display: flex;
+  gap: 2%;
+}
+.myProtofolioEducationItem > header {
+  font-size: 18px;
+  color: black;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
+}
+.myProtofolioEducationItem > p {
+  color: rgb(100, 100, 100);
+  letter-spacing: 1.1px;
+}

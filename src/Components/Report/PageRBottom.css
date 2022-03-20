@@ -1,0 +1,22 @@
+.pageRBottom {
+  display: flex;
+  justify-content: space-between;
+}
+.pageRBottom > div {
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.pageRBottom > div:nth-child(1) {
+  background-color: transparent;
+  border: 1px solid black;
+}
+.pageRBottom > div:nth-child(2) {
+  background-color: black;
+}
+.pageRBottom > div:nth-child(1) > p {
+  color: black;
+}
+.pageRBottom > div:nth-child(2) > p {
+  color: white;
+}

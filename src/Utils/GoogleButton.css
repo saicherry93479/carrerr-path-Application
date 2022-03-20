@@ -1,0 +1,15 @@
+.googleButton {
+  width: 230px;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--googleButtonColor--);
+  cursor: pointer;
+}
+.googleButton > p {
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 13px;
+}

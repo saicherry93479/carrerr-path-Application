@@ -1,0 +1,78 @@
+.homeCItem * {
+  color: black;
+}
+.homeCItem {
+  width: 80%;
+  border-bottom: 0.5px solid rgb(211, 211, 211);
+  padding: 20px 5px;
+}
+.homeCItem > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+.homeCItem > div:nth-child(1) > i {
+  color: var(--protfolioMainColor--);
+}
+.homeCItem > div:nth-child(1) > p {
+  margin-left: 10px;
+  font-size: 16px;
+  color: black;
+  letter-spacing: 1.2px;
+}
+.homeC-Title {
+  margin: 10px 0px;
+  color: black;
+}
+.homeC-Question {
+  width: 80%;
+  color: rgb(53, 53, 53);
+}
+.homeC-Forward {
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+  margin-top: 20px;
+}
+.homCItem-Item {
+  width: 80%;
+  border-bottom: 0.5px solid rgb(211, 211, 211);
+  padding: 20px 5px;
+  /* background-color: red; */
+}
+.homCItem-Item-Item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.homCItem-Item-Item > i {
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(85, 85, 85);
+}
+.homCItem-Item-Item > p {
+  font-size: 18px;
+  color: black;
+  letter-spacing: 1.2px;
+}
+.homeC-Block-textArea {
+  margin-bottom: 30px;
+  min-width: 80%;
+  max-width: 80%;
+  padding: 10px 20px;
+  color: black;
+  min-height: 30vh;
+}
+.homeC-Comment-Head {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 5px;
+}
+.comment-Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  width: max-content;
+  cursor: pointer;
+  background-color: var(--protfolioMainColor--);
+}
