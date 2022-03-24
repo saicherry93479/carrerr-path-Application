@@ -1,4 +1,10 @@
-import React, { createContext, useLayoutEffect, useRef, useState } from "react";
+import React, {
+  createContext,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import { useNavigate } from "react-router-dom";
 import "./UnderStand.css";
 import { useContext } from "react";
@@ -7,65 +13,103 @@ import PageHeader from "./PageHeader";
 import SelectionButton from "./SelectionButton";
 import ContinueButton from "./ContinueButton";
 
-import PageTwo from "./PageTwo";
 import PageOne from "./PageOne";
 import { selectData } from "../../Utils/utils";
+import PageTwo from "./PageTwo";
+import PageThree from "./PageThree";
+import PageFour from "./PageFour";
+import {
+  allBranches,
+  allCourse,
+  allTechos,
+  technologies,
+} from "../../Utils/utilsOne";
+import PageFive from "./PageFive";
+import PageSix from "./PageSix";
+import PageSeven from "./PageSeven";
+import Completed from "./Completed";
 
 export const underStandContext = createContext();
 const UnderStand = () => {
+  const [pageTwoData, setPageDataTwo] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const { displayUnderStand, setDisplayUnderStand } = useContext(scrollContext);
+  const [pageTwoFinalData, setPageTwoFinalData] = useState([]);
+  const {
+    displayUnderStand,
+    setDisplayUnderStand,
+    underStandCompleted,
+    setUnderStandCompleted,
+  } = useContext(scrollContext);
+  const [departments, setDepartments] = useState([]);
+  const [courses, setCourses] = useState([]);
+  const [pageOneCurrent, setPageOneCurrent] = useState(null);
+  const [byPass, setBypass] = useState(false);
+  const [branches, setBranches] = useState([]);
+  const [technos, setTechnos] = useState([]);
+  const [techosF, setTechosF] = useState([]);
+  const [allCourses, setAllCourses] = useState([]);
+  const [finalTechos, setFinalTechos] = useState([]);
+    const [finalSubBranches, setFinalSubBranches] = useState([]);
+  useEffect(() => {
+    setPageDataTwo(technologies.map((val) => val));
 
+    setTechosF(allTechos.map((val) => val));
+    setAllCourses(allCourse);
+    return () => {
+      setPageDataTwo([]);
+      setTechosF([]);
+      setAllCourses([]);
+    };
+  }, []);
+  useEffect(() => {
+    setBranches(allBranches.map((val) => val));
+    console.log(branches);
+  }, []);
+  useEffect(() => {
+    console.log("current page is ", currentPage);
+  }, [currentPage]);
   const navigate = useNavigate();
   const cancelHandler = () => {
     setDisplayUnderStand(false);
   };
-  const [pageOneCurrent, setPageOneCurrent] = useState(null);
-  const [pageTwoCurrent, setPageTwoCurrent] = useState([]);
-  const [pageThreeCurrent, setPageThreeCurrent] = useState([]);
-  const [pageTwoColors, setPageTwoColors] = useState([]);
-  const [pageThreeColors, setPageThreeColors] = useState([]);
-  useLayoutEffect(() => {
-    selectData.map(() =>
-      setPageTwoColors((p) => [...p, { color: null, colored: false }])
-    );
-    selectData.map(() =>
-      setPageThreeColors((p) => [...p, { color: null, colored: false }])
-    );
-  }, []);
 
   const pageData = [
-    <PageOne setCurrentPage={setCurrentPage} key={0} />,
-    <PageTwo
-      setCurrentPage={setCurrentPage}
-      key={1}
-      tex={"page2"}
-      sdata={selectData}
-      head={"What are you into?"}
-      subhead={"Select three topics of Your intreset to continue"}
-    />,
-    <PageTwo
-      tex={"page3"}
-      setCurrentPage={setCurrentPage}
-      key={2}
-      sdata={selectData}
-      head={"What are you hobbies into?"}
-      subhead={"Select three topics to of your hobbies to continue"}
-    />,
+    <PageOne key={0} setCurrentPage={setCurrentPage} />,
+    <PageTwo key={1} setCurrentPage={setCurrentPage} />,
+    <PageThree key={3} setCurrentPage={setCurrentPage} />,
+    <PageFour key={4} setCurrentPage={setCurrentPage} />,
+    <PageFive key={5} setCurrentPage={setCurrentPage} />,
+    <PageSix key={6} setCurrentPage={setCurrentPage} />,
+    <PageSeven key={6} setCurrentPage={setCurrentPage} />,
   ];
   return (
     <underStandContext.Provider
       value={{
         pageOneCurrent,
         setPageOneCurrent,
-        pageTwoCurrent,
-        setPageTwoCurrent,
-        pageThreeCurrent,
-        setPageThreeCurrent,
-        pageTwoColors,
-        setPageTwoColors,
-        pageThreeColors,
-        setPageThreeColors,
+        setBypass,
+        byPass,
+        pageTwoData,
+        setPageDataTwo,
+        courses,
+        setCourses,
+        departments,
+        setCurrentPage,
+        pageTwoFinalData,
+        setPageTwoFinalData,
+        setDepartments,
+        branches,
+        setBranches,
+        technos,
+        setTechnos,
+        techosF,
+        setTechosF,
+        allCourses,
+        setAllCourses,
+        finalTechos,
+        setFinalTechos,
+        finalSubBranches,
+        setFinalSubBranches,
       }}
     >
       <div className="understand-Sec">
@@ -73,7 +117,13 @@ const UnderStand = () => {
           <div className="underStand-Header">
             <i
               class="fa-solid fa-arrow-left understand-back"
-              onClick={() => setCurrentPage((p) => p - 1)}
+              onClick={() => {
+                // if (byPass && currentPage === 3) {
+                //   setCurrentPage((p) => p - 2);
+                // } else {
+                setCurrentPage((p) => p - 1);
+                // }
+              }}
               style={
                 currentPage === 0 ? { opacity: 0, pointerEvents: "none" } : null
               }
@@ -88,8 +138,12 @@ const UnderStand = () => {
               Skip
             </p>
           </div>
-          {pageData.map((value, index) =>
-            currentPage === index ? value : null
+          {underStandCompleted === false ? (
+            pageData.map((value, index) =>
+              currentPage === index ? value : null
+            )
+          ) : (
+            <Completed />
           )}
         </div>
       </div>

@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import "./selectionButton.css";
 import { underStandContext } from "./UnderStand";
-const SelectionButton = ({ tex, index }) => {
-  const { pageOneCurrent, setPageOneCurrent } = useContext(underStandContext);
-  const clickHandler = () => {
-    setPageOneCurrent(index);
-  };
+const SelectionButton = ({ tex, index, clickHandler }) => {
+  const { pageOneCurrent, setPageOneCurrent, } =
+    useContext(underStandContext);
+
   return (
     <div
       className="selectionButton"

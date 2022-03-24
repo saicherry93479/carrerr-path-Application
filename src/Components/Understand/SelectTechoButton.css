@@ -1,0 +1,16 @@
+.selectionTechoButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(226, 240, 253);
+  height: 35px;
+  border-radius: 20px;
+  
+  cursor: pointer;
+  padding: 8px 16px;
+  
+
+}
+.selectionTechoButton>p{
+    color: rgb(95, 95, 95);
+}

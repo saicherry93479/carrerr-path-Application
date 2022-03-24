@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ContinueButton from "./ContinueButton";
 
 import PageHeader from "./PageHeader";
 import SelectionButton from "./SelectionButton";
-const selectionButtonData = [
+import { underStandContext } from "./UnderStand";
+const selectionButtonD = [
   "School-upto 10th",
   "High School",
   "College",
@@ -11,6 +12,15 @@ const selectionButtonData = [
 ];
 
 const PageOne = ({ setCurrentPage }) => {
+  const [selectionButtonData, setSelectionButtonData] = useState([]);
+  useEffect(() => {
+    setSelectionButtonData(selectionButtonD);
+  });
+  const { pageOneCurrent, setPageOneCurrent } = useContext(underStandContext);
+  const clickHandler = (index) => {
+    setPageOneCurrent(index);
+  };
+
   return (
     <div>
       <PageHeader
@@ -20,9 +30,13 @@ const PageOne = ({ setCurrentPage }) => {
         }
       />
       {selectionButtonData.map((val, index) => (
-        <SelectionButton tex={val} index={index} />
+        <SelectionButton
+          tex={val}
+          index={index}
+          clickHandler={() => clickHandler(index)}
+        />
       ))}
-      <ContinueButton setCurrentPage={setCurrentPage} tex={"pageOne"} />
+      <ContinueButton tex={"pageOne"} />
     </div>
   );
 };

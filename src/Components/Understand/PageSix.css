@@ -1,0 +1,10 @@
+.pageSixElmentHeader {
+  margin: 10px 5px;
+  letter-spacing: 1.2px;
+}
+.pageSixBottomElment {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 8px;
+}

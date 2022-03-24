@@ -1,0 +1,28 @@
+.pageFiveTop {
+  height: 55vh;
+  /* background-color: rgb(218, 166, 166); */
+  overflow: auto;
+}
+.pageFiveElmentHeader {
+  padding: 10px 0px;
+
+  margin: 30px 0px;
+  border-bottom: 2px solid rgb(212, 211, 211);
+}
+.pageFiveElmentHeader > p {
+  color: blue;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  margin-left: 5px;
+}
+.pageFiveElment {
+  display: flex;
+  /* flex-direction: column; */
+  row-gap: 10px;
+  column-gap: 10px;
+  flex-wrap: wrap;
+  min-height: max-content;
+  max-height: 15vh;
+  overflow: auto;
+  margin-bottom: 20px;
+}

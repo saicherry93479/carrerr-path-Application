@@ -1,0 +1,14 @@
+.pageFourItem {
+  border-radius: 15px;
+  /* align-items: center; */
+  box-shadow: rgb(0 0 0 / 13%) 0px 0px 4px;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 20px;
+  height: max-content;
+}
+.pageFourItem > p {
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}

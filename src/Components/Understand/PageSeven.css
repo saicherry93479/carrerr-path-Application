@@ -1,0 +1,29 @@
+.pageSeven {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 90vh;
+  /* background-color: red; */
+}
+.pageSeven > p:nth-child(1) {
+  color: black;
+  font-size: 27px;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+.like{
+    font-size: 40vh;
+}
+.pageSevenContinue {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  background-color: var(--secondaryColor--);
+}
+.pageSevenContinue > p {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+}

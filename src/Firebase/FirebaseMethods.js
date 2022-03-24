@@ -9,6 +9,7 @@ import {
   addDoc,
   collection,
   doc,
+  getDoc,
   setDoc,
   Timestamp,
   updateDoc,
@@ -92,3 +93,43 @@ export const addComment = async (id, comment) => {
     return "fail";
   }
 };
+
+export const addUnderstand = async (data) => {
+  try {
+    const docRef = await setDoc(
+      doc(db, "underStandData", auth.currentUser.uid),
+      data
+    );
+    console.log(docRef);
+    return "sucess";
+  } catch (e) {
+    console.log("error in addquestion is ", e);
+    return "fail";
+  }
+};
+
+export const underStandDone = async () => {
+  const docRef = doc(db, "underStandData/", auth.currentUser.uid);
+  const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    console.log("docsnap data is ", docSnap.id);
+    return true;
+  } else {
+    // doc.data() will be undefined in this case
+    console.log("No such document!");
+    return false;
+  }
+};
+// export const underStandData = async () => {
+//   const docRef = doc(db, "cities", auth.currentUser.id);
+//   const docSnap = await getDoc(docRef);
+
+//   if (docSnap.exists()) {
+//     console.log("data is ", docSnap.data());
+//     return docSnap.data();
+//   } else {
+//     // doc.data() will be undefined in this case
+//     return null;
+//   }
+// };

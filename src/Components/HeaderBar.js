@@ -80,7 +80,11 @@ const HeaderBar = () => {
           </p>
           <div className="community">
             <p>Community</p>
-            <CommunityDropDown linkItems={communityLinkItems} key={2} />
+            <CommunityDropDown
+              linkItems={communityLinkItems}
+              key={2}
+              communi={true}
+            />
           </div>
         </div>
       </nav>

@@ -12,6 +12,7 @@ import Report from "./Components/Report/Report";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./Firebase/Firebase";
 import Community from "./Components/Community/Community";
+import { underStandDone } from "./Firebase/FirebaseMethods";
 
 export const scrollContext = createContext();
 const App = () => {
@@ -21,7 +22,16 @@ const App = () => {
   const [footerDisplay, setFooterDisplay] = useState(true);
   const loginRef = useRef();
   const [user, setUser] = useState(null);
-
+  const [underStandCompleted, setUnderStandCompleted] = useState(false);
+  useLayoutEffect(() => {
+    if (user) {
+      if (underStandDone() === true) {
+        setUnderStandCompleted(true);
+      } else {
+        setUnderStandCompleted(false);
+      }
+    }
+  }, [user]);
   useLayoutEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -29,7 +39,6 @@ const App = () => {
           uid: user.uid,
           email: user.email,
         });
-      } else {
       }
     });
   }, []);
@@ -47,6 +56,8 @@ const App = () => {
         user,
         setUser,
         loginRef,
+        underStandCompleted,
+        setUnderStandCompleted,
       }}
     >
       <Router>

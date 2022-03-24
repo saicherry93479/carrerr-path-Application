@@ -1,33 +1,30 @@
 import React, { useContext } from "react";
 import "./ContinueButton.css";
 import { underStandContext } from "./UnderStand";
-const ContinueButton = ({ marg, setCurrentPage, tex }) => {
-  const { pageOneCurrent, pageTwoCurrent, pageThreeCurrent } =
+const ContinueButton = ({ marg, byPass = false, tex }) => {
+  const { setCurrentPage, pageOneCurrent, pageTwoFinalData } =
     useContext(underStandContext);
   const continueHandler = () =>
     setCurrentPage((p) => {
       if (tex === "pageOne") {
-        if (pageOneCurrent !== null) {
-          return p < 2 ? p + 1 : p;
+        if (pageOneCurrent) {
+          return p + 1;
         } else {
           return p;
         }
       }
-      if ((tex = "page2")) {
-        if (pageTwoCurrent.length > 2) {
-          return p < 2 ? p + 1 : p;
+      if (tex === "pageTwo") {
+        if (!byPass && pageTwoFinalData.length > 0) {
+          return p + 2;
+        } else if (pageTwoFinalData.length > 0) {
+          return p + 1;
         } else {
           return p;
         }
       }
-      if ((tex = "page3")) {
-        if (pageThreeCurrent.length > 2) {
-          return p < 2 ? p + 1 : p;
-        } else {
-          return p;
-        }
-      }
+      return p + 1;
     });
+
   return (
     <div
       className="continueButton"

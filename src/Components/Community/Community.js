@@ -2,9 +2,12 @@ import { collection, getDocs, orderBy, query } from "firebase/firestore/lite";
 import React, {
   createContext,
   useContext,
+  useEffect,
   useLayoutEffect,
   useState,
 } from "react";
+import { useNavigate } from "react-router-dom";
+import { scrollContext } from "../../App";
 import { db } from "../../Firebase/Firebase";
 import EsatIcon from "../../Images/EsatIcon";
 import HomeIcon from "../../Images/HomeIcon";
@@ -18,9 +21,17 @@ import PostC from "./PostC";
 export const dataContext = createContext();
 
 const Community = () => {
-  const [data, setData] = useState([]);
-
   const [current, setCurrent] = useState(0);
+  const [data, setData] = useState([]);
+  const navigat = useNavigate();
+  const { user, displayLogin, setDisplayLogin } = useContext(scrollContext);
+
+  useEffect(() => {
+    if (!user) {
+      navigat("/");
+      setDisplayLogin(!displayLogin);
+    }
+  }, []);
 
   const dataQu = async () => {
     setData([]);
