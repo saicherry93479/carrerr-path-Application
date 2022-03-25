@@ -113,12 +113,11 @@ export const underStandDone = async () => {
   const docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {
-    console.log("docsnap data is ", docSnap.id);
-    return true;
+    return "true";
   } else {
     // doc.data() will be undefined in this case
     console.log("No such document!");
-    return false;
+    return "false";
   }
 };
 // export const underStandData = async () => {

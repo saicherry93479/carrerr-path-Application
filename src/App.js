@@ -25,9 +25,11 @@ const App = () => {
   const [underStandCompleted, setUnderStandCompleted] = useState(false);
   useLayoutEffect(() => {
     if (user) {
-      if (underStandDone() === true) {
+      if (underStandDone() === 'true') {
+        console.log("user is there and understand is there ");
         setUnderStandCompleted(true);
       } else {
+        console.log("user is not  there and understand is not there ");
         setUnderStandCompleted(false);
       }
     }

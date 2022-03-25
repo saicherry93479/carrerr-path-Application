@@ -11,7 +11,7 @@ import {
   communityLinkItems,
   peopleServerLinkItems,
 } from "../Utils/utils";
-import { LogOut } from "../Firebase/FirebaseMethods";
+import { LogOut, underStandDone } from "../Firebase/FirebaseMethods";
 const HeaderBar = () => {
   const navigate = useNavigate();
   const {
@@ -22,15 +22,30 @@ const HeaderBar = () => {
     user,
     setUser,
     loginRef,
+    underStandCompleted,
+    setUnderStandCompleted,
   } = useContext(scrollContext);
 
   const loginHandler = () => {
     console.log("buttonClicked ", displayLogin);
     setDisplayLogin(!displayLogin);
   };
-  const underStandHandler = () => {
+  // const underDone=async ()=>{
+  //   return await underStandDone();
+  // }
+  const underStandHandler = async () => {
     if (user) {
-      setDisplayUnderStand(!displayUnderStand);
+     
+
+      console.log("understand done in header  ", underStandDone());
+      if ((await underStandDone()) === "true") {
+        console.log("user is there and understand is there in hedaer ");
+        setUnderStandCompleted(true);
+         setDisplayUnderStand(!displayUnderStand);
+      } else {
+         setDisplayUnderStand(!displayUnderStand);
+        console.log("user is there and not understand is there in hedaer ");
+      }
     } else {
       setDisplayLogin(!displayLogin);
     }
