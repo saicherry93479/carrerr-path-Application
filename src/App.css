@@ -29,12 +29,45 @@ body {
   font-family: var(--font-family);
   /* transition: all 2s ease; */
 }
+.loading {
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.loading > p {
+  color: black;
+  font-size: 30px;
+}
+.smallScreens {
+  /* display: none; */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.smallScreens > p {
+  color: black;
+  width: 65%;
+  font-size: 20px;
+  letter-spacing: 1.1px;
+  list-style-type: 30px;
+  text-align: center;
+}
 
 @media screen and (max-width: 1200px) {
   body {
-    background-color: white;
+    /* background-color: white;
+    display: none; */
+  }
+  /* .header-Section {
     display: none;
   }
+  .smallScreens {
+    display: flex;
+  } */
 }
 .App {
   text-align: center;

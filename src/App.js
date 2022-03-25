@@ -13,6 +13,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./Firebase/Firebase";
 import Community from "./Components/Community/Community";
 import { underStandDone } from "./Firebase/FirebaseMethods";
+import useWindowDimensions from "./Utils/useWindowDimensions";
 
 export const scrollContext = createContext();
 const App = () => {
@@ -23,9 +24,12 @@ const App = () => {
   const loginRef = useRef();
   const [user, setUser] = useState(null);
   const [underStandCompleted, setUnderStandCompleted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const { height, width } = useWindowDimensions();
   useLayoutEffect(() => {
+    console.log("height is ", height, "  width is ", width);
     if (user) {
-      if (underStandDone() === 'true') {
+      if (underStandDone() === "true") {
         console.log("user is there and understand is there ");
         setUnderStandCompleted(true);
       } else {
@@ -35,12 +39,16 @@ const App = () => {
     }
   }, [user]);
   useLayoutEffect(() => {
+    setLoading(true);
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser({
           uid: user.uid,
           email: user.email,
         });
+        setLoading(false);
+      } else {
+        setLoading(false);
       }
     });
   }, []);
@@ -62,18 +70,51 @@ const App = () => {
         setUnderStandCompleted,
       }}
     >
-      <Router>
-        {headeDisplay ? <HeaderBar /> : null}
-        <Routes>
-          <Route element={<Home />} path="/"></Route>
-          <Route element={<HomeStaticOne />} path="peopleServe"></Route>
-          <Route element={<Protifolio />} path="protofolio"></Route>
-          <Route element={<Report />} path="protofolio/myReport" />
-          <Route element={<Community />} path="community" />
-        </Routes>
-        {!displayLogin && !displayUnderStand && footerDisplay && <Footer />}
-      </Router>
+      {loading ? (
+        <div className="loading"><p>Loading</p> </div>
+      ) : (
+        <Router>
+          {headeDisplay ? width > 1200 ? <HeaderBar /> : null : null}
+          <Routes>
+            <Route
+              element={width < 1200 ? <SmallScree /> : <Home />}
+              path="/"
+            ></Route>
+            <Route
+              element={width < 1200 ? <SmallScree /> : <HomeStaticOne />}
+              path="peopleServe"
+            ></Route>
+            <Route
+              element={width < 1200 ? <SmallScree /> : <Protifolio />}
+              path="protofolio"
+            ></Route>
+            <Route
+              element={width < 1200 ? <SmallScree /> : <Report />}
+              path="protofolio/myReport"
+            />
+            <Route
+              element={width < 1200 ? <SmallScree /> : <Community />}
+              path="community"
+            />
+          </Routes>
+          {!displayLogin &&
+            !displayUnderStand &&
+            footerDisplay &&
+            width > 1200 && <Footer />}
+        </Router>
+      )}
     </scrollContext.Provider>
+  );
+};
+
+const SmallScree = () => {
+  return (
+    <div className="smallScreens">
+      <p>
+        Website For Small Screens is still in Progress.Enjoy the website in
+        Desktops 😁😁😁
+      </p>
+    </div>
   );
 };
 

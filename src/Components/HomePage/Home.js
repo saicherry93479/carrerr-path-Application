@@ -12,6 +12,7 @@ const Home = () => {
 
   return (
     <div ref={scrollRef}>
+      
       <HeroPage />
       {!displayLogin && !displayUnderStand && (
         <>
