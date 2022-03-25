@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/carrerr-path-Application/static/css/main.ac9a963e.css",
+    "main.js": "/carrerr-path-Application/static/js/main.78f455ae.js",
+    "static/js/787.12100658.chunk.js": "/carrerr-path-Application/static/js/787.12100658.chunk.js",
+    "static/media/frontend.pdf": "/carrerr-path-Application/static/media/frontend.c7465e52648dea81666d.pdf",
+    "static/media/COLUDCOMUPUTING.jpeg": "/carrerr-path-Application/static/media/COLUDCOMUPUTING.a2a0ba5f2696d0c9b40e.jpeg",
+    "static/media/CYBERSECURITY.jpeg": "/carrerr-path-Application/static/media/CYBERSECURITY.360554f427899179ab38.jpeg",
+    "static/media/MECTRONICS.jpeg": "/carrerr-path-Application/static/media/MECTRONICS.62551861eb2a6a640f0a.jpeg",
+    "static/media/CHARTED ACCOUNTANCE.jpeg": "/carrerr-path-Application/static/media/CHARTED ACCOUNTANCE.ec4fa94b4be99f8c2a20.jpeg",
+    "static/media/PHARM D.jpeg": "/carrerr-path-Application/static/media/PHARM D.91ad6d967e1c8bbdcd7b.jpeg",
+    "static/media/ThirdPageMain.jpg": "/carrerr-path-Application/static/media/ThirdPageMain.3685541df2c0ffbc6b9a.jpg",
+    "static/media/ProtoFolioImageOne.png": "/carrerr-path-Application/static/media/ProtoFolioImageOne.0ae4e0b185c9f7fb0ff9.png",
+    "static/media/HomePage-Value.png": "/carrerr-path-Application/static/media/HomePage-Value.86182fc87b8d3454429d.png",
+    "index.html": "/carrerr-path-Application/index.html",
+    "main.ac9a963e.css.map": "/carrerr-path-Application/static/css/main.ac9a963e.css.map",
+    "main.78f455ae.js.map": "/carrerr-path-Application/static/js/main.78f455ae.js.map",
+    "787.12100658.chunk.js.map": "/carrerr-path-Application/static/js/787.12100658.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac9a963e.css",
+    "static/js/main.78f455ae.js"
+  ]
+}
