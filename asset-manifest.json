@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/carrerr-path-Application/static/css/main.60207265.css",
-    "main.js": "/carrerr-path-Application/static/js/main.774235f5.js",
+    "main.css": "/carrerr-path-Application/static/css/main.25376f96.css",
+    "main.js": "/carrerr-path-Application/static/js/main.04c1dab6.js",
     "static/js/787.12100658.chunk.js": "/carrerr-path-Application/static/js/787.12100658.chunk.js",
     "static/media/frontend.pdf": "/carrerr-path-Application/static/media/frontend.c7465e52648dea81666d.pdf",
     "static/media/COLUDCOMUPUTING.jpeg": "/carrerr-path-Application/static/media/COLUDCOMUPUTING.a2a0ba5f2696d0c9b40e.jpeg",
@@ -13,12 +13,12 @@
     "static/media/ProtoFolioImageOne.png": "/carrerr-path-Application/static/media/ProtoFolioImageOne.0ae4e0b185c9f7fb0ff9.png",
     "static/media/HomePage-Value.png": "/carrerr-path-Application/static/media/HomePage-Value.86182fc87b8d3454429d.png",
     "index.html": "/carrerr-path-Application/index.html",
-    "main.60207265.css.map": "/carrerr-path-Application/static/css/main.60207265.css.map",
-    "main.774235f5.js.map": "/carrerr-path-Application/static/js/main.774235f5.js.map",
+    "main.25376f96.css.map": "/carrerr-path-Application/static/css/main.25376f96.css.map",
+    "main.04c1dab6.js.map": "/carrerr-path-Application/static/js/main.04c1dab6.js.map",
     "787.12100658.chunk.js.map": "/carrerr-path-Application/static/js/787.12100658.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.60207265.css",
-    "static/js/main.774235f5.js"
+    "static/css/main.25376f96.css",
+    "static/js/main.04c1dab6.js"
   ]
 }
